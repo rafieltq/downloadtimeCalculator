@@ -10,17 +10,15 @@ var unidadTemporal;
 
 function unidadPeso(){
     switch(unidad.value) {
-        case unidad.value = "Kb":
+        case "Kb":
             pesoArchivo = peso.value
           break;
-        case unidad.value = "Mb":
+        case "Mb":
             pesoArchivo = peso.value * 1024 / 1000
           break;
-        case unidad.value = "Gb":
+        case "Gb":
             pesoArchivo = peso.value * 1024
           break;
-        default:
-          // code block
       }
 }
 function download(){
@@ -58,4 +56,3 @@ function validate(){
     console.log('object');
   }
 }
-
