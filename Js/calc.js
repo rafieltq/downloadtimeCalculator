@@ -14,7 +14,7 @@ function unidadPeso(){
             pesoArchivo = peso.value
           break;
         case unidad.value = "Mb":
-            pesoArchivo = peso.value * 1024
+            pesoArchivo = peso.value * 1024 / 1000
           break;
         case unidad.value = "Gb":
             pesoArchivo = peso.value * 1024
