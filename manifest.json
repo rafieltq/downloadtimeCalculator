@@ -6,7 +6,7 @@
     "theme_color": "#2196F3",
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": "Index.html",
+    "start_url": "index.html",
     "scope": "./",
     "lang": "es-MX",
     "icons": []
