@@ -1,0 +1,13 @@
+{
+    "name": "Download time Calculator",
+    "short_name": "DownloadTimeCalculator",
+    "description": "Calcula el tiempo que tomarán tus descargas de manera rápida y sencilla.",
+    "background_color": "#2B2B2B",
+    "theme_color": "#2196F3",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "Index.html",
+    "scope": "./",
+    "lang": "es-MX",
+    "icons": []
+    }
