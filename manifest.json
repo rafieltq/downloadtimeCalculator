@@ -9,5 +9,11 @@
     "start_url": "index.html",
     "scope": "./",
     "lang": "es-MX",
-    "icons": []
+    "icons": [
+        {
+            "src": "./img/cronometer.png",
+            "sizes": "500x500",
+            "type": "image/png"
+          }
+    ]
     }
