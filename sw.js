@@ -1,8 +1,8 @@
 const CACHE_NAME = 'download_time_calc_cache',
   urlsToCache = [
     './',
-    'index.html',
-    'Css/Style.css',
+    'Index.html',
+    'Css/styles.css',
     'Js/calc.js',
     'Img/cronometer.png'
 ]
