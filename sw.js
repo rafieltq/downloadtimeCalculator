@@ -5,7 +5,9 @@ const CACHE_NAME = 'download_time_calc_cache',
     'css/styles.css',
     'js/calc.js',
     'img/cronometer.png',
-    'css/bootsrap.css'
+    'css/bootstrap.css',
+    'js/bootstrap.min.js',
+    'css/bootstrap.min.css'
 ]
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
 self.addEventListener('install', e => {
