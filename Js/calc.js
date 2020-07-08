@@ -26,33 +26,42 @@ function download(){
 }
 function time(){
   tiempo = descarga / 60;
-  tiempo = Math.round(tiempo);
 }
 function calc(){
     unidadPeso();
     download();
     time();
-    if(tiempo < 60){
-      alerta.innerHTML = "Su descarga tomará:" + " " + tiempo + " " + "minutos";
-    } else if (tiempo > 60){
-      getHours();
-      alerta.innerHTML = "Su descarga tomará:" + " " + inthour + " " + "horas" + " " + "y" + " " + intminutes + " " +  "minutos";
+    getHours();
+    if(inthour => 24){
+      getDays()
+      alerta.innerHTML = "Su descarga tomará: " + " " + day + " " + "dia" + "," + " " + dayhours + " " + "horas" + "," + " " + intminutes + " " + "minutos" + " " + intseconds + " " + "segundos";
+    } 
+    if(inthour < 24){
+      alerta.innerHTML = "Su descarga tomará: " + " " + inthour + " " + "horas" + "," + " " + intminutes + " " + "minutos" + " " + intseconds + " " + "segundos";
     }
-    
 }
 function getHours(){
-
+    
     hour = tiempo / 60 
     inthour = Math.trunc(hour)
     floathour = hour - inthour
 
     minutes = floathour * 60
     intminutes = Math.trunc(minutes);
-    
+    floatminutes = minutes - intminutes
 
+    seconds = floatminutes * 60
+    intseconds = Math.trunc(seconds)
+}
+function getDays(){
+  day = inthour / 24;
+  dayhours = Math.trunc(inthour) - inthour;
 }
 function validate(){
-  if(peso.value == isNaN){
-    console.log('object');
+  if(peso.value == ''){
+    peso.setAttribute('class','form-control form-control-lg is-invalid')
+  }else{
+    peso.setAttribute('class','form-control form-control-lg')
   }
 }
+
