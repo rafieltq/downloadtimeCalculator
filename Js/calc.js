@@ -8,6 +8,58 @@ var descarga;
 var tiempo;
 var unidadTemporal;
 
+function velocidadDescarga(){
+  if(unidad.value == "Kb"){
+    switch(velocidad.value) {
+      case "1mb":
+          velocidad = 128
+        break;
+      case "2mb":
+          velocidad = 256
+        break;
+      case "3mb":
+          velocidad = 384
+        break;
+      case "4mb":
+          velocidad = 512
+        break;
+      case "5mb":
+          velocidad = 640
+        break;
+      case "10mb":
+          velocidad = 1.2
+        break;
+      case "20mb":
+          velocidad = 2.5
+        break;
+    }
+  } else if(unidad.value == "Mb" || unidad.value == "Gb"){
+    switch(velocidad.value) {
+      case "1mb":
+          velocidad = 0.125
+        break;
+      case "2mb":
+          velocidad = 0.25
+        break;
+      case "3mb":
+          velocidad = 0.375
+        break;
+      case "4mb":
+          velocidad = 0.5
+        break;
+      case "5mb":
+          velocidad = 0.625
+        break;
+      case "10mb":
+          velocidad = 1.25
+        break;
+      case "20mb":
+          velocidad = 0.25
+        break;
+    }
+  }
+}
+
 function unidadPeso(){
     switch(unidad.value) {
         case "Kb":
@@ -22,14 +74,15 @@ function unidadPeso(){
       }
 }
 function download(){
-  descarga = pesoArchivo / velocidad.value;
+  descarga = pesoArchivo / velocidad;
 }
 function time(){
   tiempo = descarga / 60;
 }
 function calc(){
     unidadPeso();
-    download();
+    velocidadDescarga()
+    download()
     time();
     getHours();
     if(inthour => 24){
