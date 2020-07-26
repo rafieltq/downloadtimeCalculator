@@ -1,3 +1,5 @@
+import "../css/styles.css"
+
 var peso = document.getElementById('PesoArchivo')
 var unidad = document.getElementById('SelectUnidad')
 var velocidad = document.getElementById('SelectMb')
