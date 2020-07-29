@@ -1,5 +1,3 @@
-import "../css/styles.css"
-
 var peso = document.getElementById('PesoArchivo')
 var unidad = document.getElementById('SelectUnidad')
 var velocidad = document.getElementById('SelectMb')
@@ -35,7 +33,31 @@ function velocidadDescarga(){
           velocidad = 2.5
         break;
     }
-  } else if(unidad.value == "Mb" || unidad.value == "Gb"){
+  } else if(unidad.value == "Mb"){
+    switch(velocidad.value) {
+      case "1mb":
+          velocidad = 0.125
+        break;
+      case "2mb":
+          velocidad = 0.25
+        break;
+      case "3mb":
+          velocidad = 0.375
+        break;
+      case "4mb":
+          velocidad = 0.5
+        break;
+      case "5mb":
+          velocidad = 0.625
+        break;
+      case "10mb":
+          velocidad = 1.25
+        break;
+      case "20mb":
+          velocidad = 0.25
+        break;
+    }
+  }else if(unidad.value == "Gb"){
     switch(velocidad.value) {
       case "1mb":
           velocidad = 0.125
