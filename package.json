@@ -1,0 +1,20 @@
+{
+  "name": "downloadtimeCalculator",
+  "version": "1.0.0",
+  "description": "Una app para calcular cuanto tiempo tomara la descarga de tu archivo de manera sencilla",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R4FI3L/downloadtimeCalculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R4FI3L/downloadtimeCalculator/issues"
+  },
+  "homepage": "https://github.com/R4FI3L/downloadtimeCalculator#readme"
+}
