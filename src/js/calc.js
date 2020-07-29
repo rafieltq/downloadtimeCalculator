@@ -104,6 +104,14 @@ function time(){
   tiempo = descarga / 60;
 }
 function calc(){
+    peso = document.getElementById('PesoArchivo')
+    unidad = document.getElementById('SelectUnidad')
+    velocidad = document.getElementById('SelectMb')
+    alerta = document.getElementById('alerta')
+    pesoArchivo;
+    descarga;
+    tiempo;
+    unidadTemporal;
     unidadPeso();
     velocidadDescarga()
     download()
