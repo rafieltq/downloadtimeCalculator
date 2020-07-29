@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/R4FI3L/downloadtimeCalculator/issues"
   },
-  "homepage": "https://github.com/R4FI3L/downloadtimeCalculator#readme"
+  "homepage": "https://github.com/R4FI3L/downloadtimeCalculator#readme",
+  "dependencies": {
+    "webpack": "^4.44.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
+  }
 }
