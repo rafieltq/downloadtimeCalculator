@@ -1,5 +1,5 @@
 {
-  "name": "downloadtimeCalculator",
+  "name": "download-time-calculator",
   "version": "1.0.0",
   "description": "Una app para calcular cuanto tiempo tomara la descarga de tu archivo de manera sencilla",
   "main": "sw.js",
@@ -18,12 +18,16 @@
   },
   "homepage": "https://github.com/R4FI3L/downloadtimeCalculator#readme",
   "dependencies": {
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
+    "i18n": "^0.10.0",
     "webpack": "^4.44.0",
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
     "css-loader": "^4.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "i18n-webpack-plugin": "^1.0.0",
     "style-loader": "^1.2.1",
     "webpack-cli": "^3.3.12"
   }
