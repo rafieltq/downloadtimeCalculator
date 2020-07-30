@@ -3,8 +3,8 @@
 </div>
 <p style="float:left;">
 <img src="https://i.imgur.com/LZy1egI.png" width="150" />
-<img src="https://imgur.com/fRW8a7A" width="200" />
-<img src="https://imgur.com/JVcbSnh" width="150" />
+<img src="https://i.imgur.com/fRW8a7A.png" width="200" />
+<img src="https://i.imgur.com/JVcbSnh.png" width="150" />
 </p>
 
 ---
