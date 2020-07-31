@@ -35,7 +35,7 @@
   <div class="container div p-3">
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
-      <div class="col-sm-12 text-center"><h2>Peso del archivo</h2></div>
+      <div class="col-sm-12 text-center"><h2 data-i18n>Peso</h2></div>
       <div class="col-4"></div>
     </div>
     <div class="row align-items-center justify-content-center">
@@ -49,7 +49,7 @@
     </div>
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
-      <div class="col-sm-12 text-center"><h2>Velocidad de internet</h2></div>
+      <div class="col-sm-12 text-center"><h2 data-i18n>Velocidad</h2></div>
       <div class="col-4"></div>
     </div>
     <div class="row align-items-center justify-content-center">
@@ -63,12 +63,21 @@
         <option value="10mb">10mb</option>
         <option value="20mb">20mb</option>
       </select></div>
-      <div class="col-4 text-center mt-3"><button id="CalcBtn" onclick="calc()" class="form-control btn btn-outline-info">Calcular</button></div>
+      <div class="col-4 text-center mt-3"><button id="CalcBtn" data-i18n onclick="calc()" class="form-control btn btn-outline-info">Calcular</button></div>
     </div>
-    <div id="alerta" class="alert alert-primary mt-5 text-center" role="alert">
-      Aqui se verá el tiempo que tomará su descarga.
+    <div id="alerta" class="alert alert-primary mt-5 text-center" data-i18n role="alert">
+      Resultado
+    </div class="">
+    <!--Change language-->
+    <div class="languages row align-items-center justify-content-center">
+      <h4 data-i18n>Idiomas</h3>
+      
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" onclick="switchLanguages('ES')" class="btn btn-outline">Español</button>
+        <button type="button" onclick="switchLanguages('EN')" class="btn btn-outline">English</button>
+        <button type="button" onclick="switchLanguages('FR')" class="btn btn-outline">Franch</button>
+      </div>
     </div>
-
     <!-- Modal -->
     <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -76,7 +85,7 @@
           <div class="modal-header">
           </div>
           <div class="modal-body">
-            ¿No sabes cual es tu velocidad de internet? puedes verificarlo en: <a target="blank" href="https://fast.com/es/">Fast.com</a>
+            <span data-i18n>Verificar</span> <a target="blank" href="https://fast.com/es/">Fast.com</a>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal">Cerrar</button>
@@ -87,6 +96,7 @@
   </div>
       <script src="src/js/jquery-3.5.1.min.js"></script>
       <script src="src/js/bootstrap.min.js"></script>
+      <script src="src/i18n/i18n.js"></script>
       <script src="src/js/script.js"></script>
       <script src="src/i18n/i18n.js"></script>
       <script src="src/js/calc.js"></script>
