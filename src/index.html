@@ -25,7 +25,6 @@
     <link rel="apple-touch-startup-image" href="img/cronometer.png">
     <link rel="manifest" href="manifest.json">
 </head>
-
 <body>
   <nav class="navbar navbar-dark" style="background:#039BE5">
     <span class="navbar-brand mb-0 h1"><img src="img/cronometer.png" class="logo align-middle" alt=""><span class="align-middle">Download time calculator</span></span>
@@ -35,7 +34,7 @@
   <div class="container div p-3">
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
-      <div class="col-sm-12 text-center"><h2 data-i18n>Peso</h2></div>
+      <div class="col-sm-12 text-center"><h2 data-i18n data-i18n-key="weight">weight</h2></div>
       <div class="col-4"></div>
     </div>
     <div class="row align-items-center justify-content-center">
@@ -49,7 +48,7 @@
     </div>
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
-      <div class="col-sm-12 text-center"><h2 data-i18n>Velocidad</h2></div>
+      <div class="col-sm-12 text-center"><h2 data-i18n>speed</h2></div>
       <div class="col-4"></div>
     </div>
     <div class="row align-items-center justify-content-center">
@@ -66,16 +65,16 @@
       <div class="col-4 text-center mt-3"><button id="CalcBtn" data-i18n onclick="calc()" class="form-control btn btn-outline-info">Calcular</button></div>
     </div>
     <div id="alerta" class="alert alert-primary mt-5 text-center" data-i18n role="alert">
-      Resultado
+      results
     </div class="">
     <!--Change language-->
     <div class="languages row align-items-center justify-content-center">
-      <h4 data-i18n>Idiomas</h3>
+      <h4 data-i18n>language</h3>
       
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" onclick="switchLanguages('ES')" class="btn btn-outline">Español</button>
-        <button type="button" onclick="switchLanguages('EN')" class="btn btn-outline">English</button>
-        <button type="button" onclick="switchLanguages('FR')" class="btn btn-outline">Franch</button>
+        <button type="button" onclick="switchLanguages('es')" class="btn btn-outline">Español</button>
+        <button type="button" onclick="switchLanguages('en')" class="btn btn-outline">English</button>
+        <button type="button" onclick="switchLanguages('fr')" class="btn btn-outline">Français</button>
       </div>
     </div>
     <!-- Modal -->
@@ -85,10 +84,10 @@
           <div class="modal-header">
           </div>
           <div class="modal-body">
-            <span data-i18n>Verificar</span> <a target="blank" href="https://fast.com/es/">Fast.com</a>
+            <span data-i18n>doYouKnow</span> <a target="blank" href="https://fast.com/es/">Fast.com</a>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal"><span data-i18n>close</span></button>
           </div>
         </div>
       </div>
