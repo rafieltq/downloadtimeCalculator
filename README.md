@@ -32,6 +32,6 @@ $ npm install
 ```bash
 $ npm install webpack
 $ npm install webpack-dev-server
-# to execute
-$ npx webpack-dev-server
+# to execute a test enviroment
+$ npm run server
 ```
