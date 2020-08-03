@@ -5,9 +5,6 @@
     <!--Others-->
     <title>Download Calculator</title>
     <link  rel="icon" href="img/cronometer.png" type="image/png" />
-    <link rel="stylesheet" href="src/css/styles.css">
-    <link rel="stylesheet" href="src/css/bootstrap.css">
-    <link rel="stylesheet" href="src/css/bootstrap.min.css">
     <!---Manifest-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +31,7 @@
   <div class="container div p-3">
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
-      <div class="col-sm-12 text-center"><h2 data-i18n data-i18n-key="weight">weight</h2></div>
+      <div class="col-sm-12 text-center"><h2 data-i18n data-i18n-key="weight">File weight</h2></div>
       <div class="col-4"></div>
     </div>
     <div class="row align-items-center justify-content-center">
@@ -48,7 +45,7 @@
     </div>
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
-      <div class="col-sm-12 text-center"><h2 data-i18n>speed</h2></div>
+      <div class="col-sm-12 text-center"><h2 data-i18n data-i18n-key="speed">Internet speed</h2></div>
       <div class="col-4"></div>
     </div>
     <div class="row align-items-center justify-content-center">
@@ -62,14 +59,14 @@
         <option value="10mb">10mb</option>
         <option value="20mb">20mb</option>
       </select></div>
-      <div class="col-4 text-center mt-3"><button id="CalcBtn" data-i18n onclick="calc()" class="form-control btn btn-outline-info">Calcular</button></div>
+      <div class="col-4 text-center mt-3"><button id="CalcBtn" data-i18n data-i18n-key="calculate" onclick="calc()" class="form-control btn btn-outline-info">Calculate</button></div>
     </div>
-    <div id="alerta" class="alert alert-primary mt-5 text-center" data-i18n role="alert">
-      results
+    <div id="alerta" class="alert alert-primary mt-5 text-center" data-i18n data-i18n-key="results" role="alert">
+      Here you will see how long your download will take.
     </div class="">
     <!--Change language-->
     <div class="languages row align-items-center justify-content-center">
-      <h4 data-i18n>language</h3>
+      <h4 data-i18n data-i18n-key="language">Languages</h3>
       
       <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" onclick="switchLanguages('es')" class="btn btn-outline">Español</button>
@@ -84,22 +81,15 @@
           <div class="modal-header">
           </div>
           <div class="modal-body">
-            <span data-i18n>doYouKnow</span> <a target="blank" href="https://fast.com/es/">Fast.com</a>
+            <span data-i18n data-i18n-key="doYouKnow">Don't you know what your internet speed is? You can check it at:</span> <a target="blank" href="https://fast.com/es/">Fast.com</a>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal"><span data-i18n>close</span></button>
+            <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal"><span data-i18n data-i18n-key="close">close</span></button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-      <script src="src/js/jquery-3.5.1.min.js"></script>
-      <script src="src/js/bootstrap.min.js"></script>
-      <script src="src/i18n/i18n.js"></script>
-      <script src="src/js/script.js"></script>
-      <script src="src/i18n/i18n.js"></script>
-      <script src="src/js/calc.js"></script>
-      
+  </div> 
 </body>
 
 </html>

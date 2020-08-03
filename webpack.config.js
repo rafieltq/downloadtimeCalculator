@@ -1,9 +1,8 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-
 var path = require('path');
 
 module.exports={
-    entry: './src/js/calc.js',
+    entry: './src/js/index.js',
     output:{
         path: path.resolve(__dirname, './build'),
         filename:'bundle.js'
@@ -16,14 +15,13 @@ module.exports={
     module: {
         rules: [
             {
-                test: /\.css$/i,
+                test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
+            {
+                test: /\.js$/,
+                loader:'babel-loader',
+            }
         ],
-    },
-    module: {
-        rules:[
-            { test: /\.js$/, exclude: /node_modules/,loader: "babel-loader" }
-        ]
-    },
+    }
 };

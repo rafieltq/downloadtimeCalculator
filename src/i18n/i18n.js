@@ -45,7 +45,7 @@ const franchConfig = {
     
 }
 
-//switch languages
+
 
 
 
@@ -55,12 +55,11 @@ idioma = idioma.substring(0,2);
 
 const elements = document.querySelectorAll("[data-i18n]");
 
-
-
+//switch languages
 function switchLanguages(lang){
     var language = lang;
     const replaceText = (el) => {
-        const key = el.innerText;
+        const key = el.getAttribute('data-i18n-key');
         switch (language) {
             case 'es':
                 el.innerText = spanishConfig[key] || key;
@@ -77,4 +76,4 @@ function switchLanguages(lang){
     elements.forEach(el => replaceText(el));
 }
 
-
+export {switchLanguages,}
