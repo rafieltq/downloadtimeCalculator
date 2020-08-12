@@ -1,14 +1,33 @@
-var peso = document.getElementById('PesoArchivo')
-var unidad = document.getElementById('SelectUnidad')
-var velocidad = document.getElementById('SelectMb')
-var Btn = document.getElementById('CalcBtn')
-var alerta = document.getElementById('alerta')
-var pesoArchivo;
-var descarga;
-var tiempo;
-var unidadTemporal;
+export var peso = document.getElementById('PesoArchivo')
+export var unidad = document.getElementById('SelectUnidad')
+export var velocidad = document.getElementById('SelectMb')
+export var Btn = document.getElementById('CalcBtn')
+export var pesoArchivo;
+export var descarga;
+export var tiempo;
+export var unidadTemporal;
+export var hour;
+export var inthour;
+export var floathour;
+export var seconds
+export var intseconds
+export var day;
+export var dayhours;
+export var minutes;
+export var intminutes;
+export var floatminutes;
+export var numHour = document.getElementById('hour')
+export var numMinutes = document.getElementById('minutes')
+export var numSeconds = document.getElementById('seconds')
+export var numDay = document.getElementById('days')
+export var daytxt = document.getElementById('daytxt')
+export var hourstxt = document.getElementById('hourtxt')
+export var minutestxt = document.getElementById('minutestxt')
+export var secondstxt = document.getElementById('secondstxt')
 
-function velocidadDescarga(){
+import { switchLanguages,idioma } from '../i18n/i18n'
+
+export function velocidadDescarga(){
   if(unidad.value == "Kb"){
     switch(velocidad.value) {
       case "1mb":
@@ -27,10 +46,10 @@ function velocidadDescarga(){
           velocidad = 640
         break;
       case "10mb":
-          velocidad = 1.2
+          velocidad = 1280
         break;
       case "20mb":
-          velocidad = 2.5
+          velocidad = 2560
         break;
     }
   } else if(unidad.value == "Mb"){
@@ -51,10 +70,10 @@ function velocidadDescarga(){
           velocidad = 0.625
         break;
       case "10mb":
-          velocidad = 1.25
+          velocidad = 1.28
         break;
       case "20mb":
-          velocidad = 0.25
+          velocidad = 2.56
         break;
     }
   }else if(unidad.value == "Gb"){
@@ -75,16 +94,16 @@ function velocidadDescarga(){
           velocidad = 0.625
         break;
       case "10mb":
-          velocidad = 1.25
+          velocidad = 1.28
         break;
       case "20mb":
-          velocidad = 0.25
+          velocidad = 2.56
         break;
     }
   }
 }
 
-function unidadPeso(){
+export function unidadPeso(){
     switch(unidad.value) {
         case "Kb":
             pesoArchivo = peso.value
@@ -97,17 +116,20 @@ function unidadPeso(){
           break;
       }
 }
-function download(){
+export function download(){
   descarga = pesoArchivo / velocidad;
 }
-function time(){
+export function time(){
   tiempo = descarga / 60;
 }
-function calc(){
+export function calc(){
     peso = document.getElementById('PesoArchivo')
     unidad = document.getElementById('SelectUnidad')
     velocidad = document.getElementById('SelectMb')
-    alerta = document.getElementById('alerta')
+    numHour = document.getElementById('hour')
+    numMinutes = document.getElementById('minutes')
+    numSeconds = document.getElementById('seconds')
+    numDay = document.getElementById('days')
     pesoArchivo;
     descarga;
     tiempo;
@@ -119,13 +141,43 @@ function calc(){
     getHours();
     if(inthour => 24){
       getDays()
-      alerta.innerHTML = "<span data-i18n data-i18n-key='downloadTime'>downloadTime</span> " + " " + day + " " + "<span data-i18n>day</span>" + "," + " " + dayhours + " " + "<span data-i18n>hours</span>" + "," + " " + intminutes + " " + "<span data-i18n>minutes</span>" + " " + intseconds + " " + "<span data-i18n>seconds</span>";
+      numDay.innerHTML = dayhours
+      numHour.innerHTML = inthour
+      numMinutes.innerHTML = intminutes
+      numSeconds.innerHTML = intseconds
+
+      daytxt.innerHTML = 'days'
+      hourstxt.innerHTML = 'hours'
+      minutestxt.innerHTML = 'minutes'
+      secondstxt.innerHTML = 'seconds'
+      switchLanguages(idioma);
+
+      daytxt.setAttribute('class','timetext-show')
+      hourstxt.setAttribute('class','timetext-show')
+      minutestxt.setAttribute('class','timetext-show')
+      secondstxt.setAttribute('class','timetext-show')
+      
     } 
     if(inthour < 24){
-      alerta.innerHTML = "<span data-i18n>downloadTime</span> " + " " + inthour + " " + "<span data-i18n>hours</span>" + "," + " " + intminutes + " " + "<span data-i18n>minutes</span>" + " " + intseconds + " " + "<span data-i18n>seconds</span>";
+      
+      numHour.innerHTML = inthour
+      numMinutes.innerHTML = intminutes
+      numSeconds.innerHTML = intseconds
+
+      numDay.innerHTML = ''
+      hourstxt.innerHTML = 'hours'
+      minutestxt.innerHTML = 'minutes'
+      secondstxt.innerHTML = 'seconds'
+      switchLanguages(idioma);
+
+      daytxt.setAttribute('class','timetext-hide')
+      hourstxt.setAttribute('class','timetext-show')
+      minutestxt.setAttribute('class','timetext-show')
+      secondstxt.setAttribute('class','timetext-show')
+      
     }
 }
-function getHours(){
+export function getHours(){
     
     hour = tiempo / 60 
     inthour = Math.trunc(hour)
@@ -138,16 +190,7 @@ function getHours(){
     seconds = floatminutes * 60
     intseconds = Math.trunc(seconds)
 }
-function getDays(){
+export function getDays(){
   day = inthour / 24;
-  dayhours = Math.trunc(inthour) - inthour;
+  dayhours = Math.trunc(day);
 }
-function validate(){
-  if(peso.value == ''){
-    peso.setAttribute('class','form-control form-control-lg is-invalid')
-  }else{
-    peso.setAttribute('class','form-control form-control-lg')
-  }
-}
-
-export default {validate,getDays,getHours,time,download,velocidadDescarga,unidadPeso,calc};

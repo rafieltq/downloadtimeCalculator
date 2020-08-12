@@ -8,3 +8,9 @@
     width:40px;
     height:40px;
 }
+.timetext-hide{
+    display:none;
+}
+.timetext-show{
+    display:inline;
+}

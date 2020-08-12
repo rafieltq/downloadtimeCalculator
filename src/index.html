@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!----Boostrap-->
     <!--Others-->
     <title>Download Calculator</title>
     <link  rel="icon" href="img/cronometer.png" type="image/png" />
@@ -25,7 +24,6 @@
 <body>
   <nav class="navbar navbar-dark" style="background:#039BE5">
     <span class="navbar-brand mb-0 h1"><img src="img/cronometer.png" class="logo align-middle" alt=""><span class="align-middle">Download time calculator</span></span>
-    <h3><span id="info"  data-toggle="modal" data-target="#infoModal" class="badge badge-dark" style="border-radius: 30px; width:30px; height:30px;">?</span></h3>
   </nav>
   <br>
   <div class="container div p-3">
@@ -36,7 +34,8 @@
     </div>
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
-      <div class="col-sm-12 text-center"><input type="number" onblur="validate()" class="form-control form-control-lg" id="PesoArchivo" required></div>
+      <div class="col-sm-12 text-center">
+      <input type="number" class="form-control form-control-lg" id="PesoArchivo" required></div>
       <div class="col-12"><select class="form-control form-control-lg mt-3" id="SelectUnidad">
         <option value="Kb">Kb</option>
         <option value="Mb">Mb</option>
@@ -59,34 +58,28 @@
         <option value="10mb">10mb</option>
         <option value="20mb">20mb</option>
       </select></div>
-      <div class="col-4 text-center mt-3"><button id="CalcBtn" data-i18n data-i18n-key="calculate" onclick="calc()" class="form-control btn btn-outline-info">Calculate</button></div>
+      <div class="col-4 text-center mt-3">
+        <button id="CalcBtn" data-i18n data-i18n-key="calculate" class="form-control btn btn-outline-info">Calculate</button>
+      </div>
     </div>
-    <div id="alerta" class="alert alert-primary mt-5 text-center" data-i18n data-i18n-key="results" role="alert">
-      Here you will see how long your download will take.
-    </div class="">
+    <div id="alerta" class="alert alert-primary mt-5 text-center" role="alert">
+      <span id="textAlert" data-i18n data-i18n-key="downloadTime">Your download will take</span> 
+      <span id="days"></span>
+      <span id="daytxt" class="timetext-hide" data-i18n data-i18n-key="day"></span>
+      <span id="hour"></span>
+      <span id="hourtxt" class="timetext-hide" data-i18n data-i18n-key="hours"></span>
+      <span id="minutes"></span>
+      <span id="minutestxt" class="timetext-hide" data-i18n data-i18n-key="minutes"></span>
+      <span id="seconds"></span>
+      <span id="secondstxt" class="timetext-hide" data-i18n data-i18n-key="seconds"></span>
+    </div>
     <!--Change language-->
     <div class="languages row align-items-center justify-content-center">
       <h4 data-i18n data-i18n-key="language">Languages</h3>
-      
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" onclick="switchLanguages('es')" class="btn btn-outline">Español</button>
-        <button type="button" onclick="switchLanguages('en')" class="btn btn-outline">English</button>
-        <button type="button" onclick="switchLanguages('fr')" class="btn btn-outline">Français</button>
-      </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-          </div>
-          <div class="modal-body">
-            <span data-i18n data-i18n-key="doYouKnow">Don't you know what your internet speed is? You can check it at:</span> <a target="blank" href="https://fast.com/es/">Fast.com</a>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal"><span data-i18n data-i18n-key="close">close</span></button>
-          </div>
-        </div>
+        <button type="button" id="spanish" value="es" class="btn btn-outline">Español</button>
+        <button type="button" id="english" value="es" class="btn btn-outline">English</button>
+        <button type="button" id="franch" value="fr" class="btn btn-outline">Français</button>
       </div>
     </div>
   </div> 
