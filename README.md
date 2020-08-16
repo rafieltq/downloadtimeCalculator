@@ -10,7 +10,7 @@
 ---
 ### Description
 
-**Sheiley Shop** is a **PWA** to calculate the download time of your files
+**Download Time Calclulator** is a **PWA** to calculate the download time of your files
 
 
 ### Features
