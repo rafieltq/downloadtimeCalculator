@@ -26,7 +26,7 @@
     "@ngx-translate/http-loader": "^6.0.0",
     "bootstrap": "^4.5.0",
     "i18n": "^0.10.0",
-    "webpack": "^4.44.0",
+    "webpack": "^4.44.1",
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
