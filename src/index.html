@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!--Others-->
-    <title>Download Calculator</title>
-    <link  rel="icon" href="img/cronometer.png" type="image/png" />
-    <!---Manifest-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Others-->
+  <title>Download Calculator</title>
+  <link rel="icon" href="img/cronometer.png" type="image/png" />
+  <!---Manifest-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Calcula el tiempo que tomarán tus descargas de manera rápida y sencilla.">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Calcula el tiempo que tomarán tus descargas de manera rápida y sencilla.">
 
-    <meta name="theme-color" content="#2196F3">
-    <meta name="MobileOptimized" content="width">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="Download-time-calculator" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="shortcut icon" type="image/png" href="img/cronometer.png">
-    <link rel="apple-touch-icon" href="img/cronometer.png">
-    <link rel="apple-touch-startup-image" href="img/cronometer.png">
-    <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#2196F3">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="Download-time-calculator" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" type="image/png" href="img/cronometer.png">
+  <link rel="apple-touch-icon" href="img/cronometer.png">
+  <link rel="apple-touch-startup-image" href="img/cronometer.png">
+  <link rel="manifest" href="../manifest.json">
 </head>
+
 <body>
   <nav class="navbar navbar-dark" style="background:#039BE5">
-    <span class="navbar-brand mb-0 h1"><img src="img/cronometer.png" class="logo align-middle" alt=""><span class="align-middle">Download time calculator</span></span>
+    <span class="navbar-brand mb-0 h1"><img src="img/cronometer.png" class="logo align-middle" alt=""><span
+        class="align-middle">Download time calculator</span></span>
   </nav>
   <br>
   <div class="container div p-3">
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
-      <div class="col-sm-12 text-center"><h2 data-i18n data-i18n-key="weight">File weight</h2></div>
+      <div class="col-sm-12 text-center">
+        <h2 data-i18n data-i18n-key="weight">File weight</h2>
+      </div>
       <div class="col-4"></div>
     </div>
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
       <div class="col-sm-12 text-center">
-      <input type="number" class="form-control form-control-lg" id="PesoArchivo" required></div>
+        <input type="number" class="form-control form-control-lg" id="PesoArchivo" required>
+      </div>
       <div class="col-12"><select class="form-control form-control-lg mt-3" id="SelectUnidad">
-        <option value="Kb">Kb</option>
-        <option value="Mb">Mb</option>
-        <option value="Gb">Gb</option>
-      </select></div>
+          <option value="Kb">Kb</option>
+          <option value="Mb">Mb</option>
+          <option value="Gb">Gb</option>
+        </select></div>
     </div>
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
-      <div class="col-sm-12 text-center"><h2 data-i18n data-i18n-key="speed">Internet speed</h2></div>
+      <div class="col-sm-12 text-center">
+        <h2 data-i18n data-i18n-key="speed">Internet speed</h2>
+      </div>
       <div class="col-4"></div>
     </div>
     <div class="row align-items-center justify-content-center">
       <div class="col-4"></div>
       <div class="col-sm-12 text-center"><select class="form-control form-control-lg" id="SelectMb">
-        <option value="1mb">1mb</option>
-        <option value="2mb">2mb</option>
-        <option value="3mb">3mb</option>
-        <option value="4mb">4mb</option>
-        <option value="5mb">5mb</option>
-        <option value="10mb">10mb</option>
-        <option value="20mb">20mb</option>
-      </select></div>
+          <option value="1mb">1mb</option>
+          <option value="2mb">2mb</option>
+          <option value="3mb">3mb</option>
+          <option value="4mb">4mb</option>
+          <option value="5mb">5mb</option>
+          <option value="10mb">10mb</option>
+          <option value="20mb">20mb</option>
+        </select></div>
       <div class="col-4 text-center mt-3">
-        <button id="CalcBtn" data-i18n data-i18n-key="calculate" class="form-control btn btn-outline-info">Calculate</button>
+        <button id="CalcBtn" data-i18n data-i18n-key="calculate"
+          class="form-control btn btn-outline-info">Calculate</button>
       </div>
     </div>
     <div id="alerta" class="alert alert-primary mt-5 text-center" role="alert">
-      <span id="textAlert" data-i18n data-i18n-key="downloadTime">Your download will take:</span> 
+      <span id="textAlert" data-i18n data-i18n-key="downloadTime">Your download will take:</span>
       <span id="days"></span>
       <span id="daytxt" class="timetext-hide" data-i18n data-i18n-key="day"></span>
       <span id="hour"></span>
@@ -76,13 +85,13 @@
     <!--Change language-->
     <div class="languages row align-items-center justify-content-center">
       <h4 data-i18n data-i18n-key="language">Languages</h3>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" id="spanish" value="es" class="btn btn-outline">Español</button>
-        <button type="button" id="english" value="es" class="btn btn-outline">English</button>
-        <button type="button" id="franch" value="fr" class="btn btn-outline">Français</button>
-      </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" id="spanish" value="es" class="btn btn-outline">Español</button>
+          <button type="button" id="english" value="es" class="btn btn-outline">English</button>
+          <button type="button" id="franch" value="fr" class="btn btn-outline">Français</button>
+        </div>
     </div>
-  </div> 
+  </div>
 </body>
 
 </html>

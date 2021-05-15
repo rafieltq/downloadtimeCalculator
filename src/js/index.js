@@ -7,6 +7,7 @@ import '../i18n/i18n'
 import { validate } from './validation'
 import { spanishSwitch, switchLanguages, englishSwitch, franchSwitch } from '../i18n/i18n'
 
+switchLanguages('en');
 
 peso.addEventListener('blur',validate);
 
