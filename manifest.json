@@ -11,7 +11,7 @@
     "lang": "es-MX",
     "icons": [
         {
-            "src": "./img/cronometer.png",
+            "src": "./src/assets/img/cronometer.png",
             "sizes": "500x500",
             "type": "image/png"
           }
