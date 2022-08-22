@@ -22,7 +22,7 @@
 ## Setup
 
 ```bash
-$ git clone https://github.com/R4FI3L/downloadtimeCalculator.git
+$ git clone https://github.com/rafieltq/downloadtimeCalculator.git
 ```
 
 ```bash
