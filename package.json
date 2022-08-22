@@ -27,7 +27,7 @@
     "bootstrap": "^4.5.0",
     "i18n": "^0.10.0",
     "webpack": "^4.46.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
